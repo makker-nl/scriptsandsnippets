@@ -5,11 +5,11 @@
 # Script to set variables to work with keystore/truststores.
 #
 # author: Martien van den Akker
-# (C) semtember 2021
+# (C) september 2021
 # VirtualSciences | Conclusion
 ###################################################################################################
 SCRIPTPATH=$(dirname $0)
-BASEDIR=$SCRIPTPATH/../..
+BASEDIR=$SCRIPTPATH/..
 CONFDIR=$BASEDIR/configuration
 #
 #export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64/jre
