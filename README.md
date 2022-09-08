@@ -2,4 +2,4 @@
 Sharable Scripts and Snippets
 
 # Cheat Sheets
-* [Maven Cheat Sheet](maven.md)
+* [Maven Cheat Sheet](doc/maven.md)
