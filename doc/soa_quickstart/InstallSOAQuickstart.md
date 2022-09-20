@@ -63,3 +63,9 @@ Then navigate to the Script Location, in the folder where this Git Repo is clone
     c:\Data\git\makker\scriptsandsnippets\scripts\windows\soa_qs>installSoaQS.bat
     
 This might take a few minutes as it first checks and possibly installs the Oracle JDK 8, and then Oracle SOA Quickstart.
+
+It will create a Oracle\SOA_QS folder in the Windows %TEMP% Folder. After saving the current folder, it will do a change directory to it, to unzip the Installer Zip files into that temp folder. After the installation of the Quickstart it will change back to the saved folder.
+
+<img src="images/TEMPSOA_QS.png" width="525px" height="148px"/>
+
+Afterwards, you might want to clean-up the this folder. This is not done automatically.
