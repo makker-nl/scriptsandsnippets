@@ -68,4 +68,4 @@ It will create a Oracle\SOA_QS folder in the Windows %TEMP% Folder. After saving
 
 <img src="images/TEMPSOA_QS.png" width="525px" height="148px"/>
 
-Afterwards, you might want to clean-up the this folder. This is not done automatically.
+Afterwards, you might want to clean-up this folder. This is not done automatically.
