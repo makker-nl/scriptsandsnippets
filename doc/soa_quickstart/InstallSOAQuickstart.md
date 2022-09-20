@@ -3,27 +3,14 @@
 ## Download
 
 ### Oracle JDK 8
-Download the most recent Oracle JDK 8 from [Oracle Software Delivery Cloud](https://edelivery.oracle.com), (Free) Oracle account required.
+Download the most recent Oracle JDK 8 from [Oracle Software Delivery Cloud](https://www.oracle.com/java/technologies/downloads/#java8-windows).
+Find the Java SE, Java 8 part and download the _x64 Installer_ for Windows:
+<img src="images/OracleJava8Download.png" width="1024px" />
+Copy the download to a stage folder:
+<img src="images/OracleJava8StageFolder.png" width="658px" height="127px"/>
 
-In the search box search for the _Release_ of _Oracle JDK 1.8.0_:
-<img src="images/OracleEdeliveryJavaSearch.png" width="1024px"   />
-Select the the most recent version of  _Oracle JDK 1.8.0_, in this example  *Oracle JDK 1.8.0_341*. This adds the option to the cart.
-Then click on _View Items_ in the cart and then on _Continue_.
-
-In the next screen select _Microsoft Windows_ and click on _Continue_:
-<img src="images/OracleEdeliveryJavaPlatform.png" width="1024px" />
-
-After this a screen appears in which you should accept the download/license agreement. After you do, you get to the following page:
-<img src="images/OracleEdeliveryJavaDownload.png" width="1024px" />
-Here, click on the link of the zip file, in this example _V1021598-01.zip_, to download it (no need to use the Download button).
-
-Place the file  in a staging folder like:
-<img src="images/OracleJavaStageFolder.png" width="525px" height="137px"/>
-The script expects it in the c:\Data\Stage\Java\JDK8 folder. Which you can adapt of course.
-
+The script expects the download in the _C:\Data\Stage\Java\JDK8_ folder. Which you can adapt of course.
 
 
 ### Oracle SOA Quickstart 12.2.1.4
-
-
-[SOASuite Download](https://www.oracle.com/nl/middleware/technologies/soasuite/downloads.html#)
+The landing page for the download of SOA Quickstart can be found here: [SOASuite Download](https://www.oracle.com/nl/middleware/technologies/soasuite/downloads.html#). But it will direct you to the correct 
