@@ -6,4 +6,4 @@ Sharable Scripts and Snippets
 * [Curl Cheat Sheet](doc/curl.md)
 
 # Silent/Scripted Install SOA QuickStart 12.2.1.4
-See [Install Oracle SOA Quickstart](doc\soa_quickstart\InstallSOAQuickstart.md).
+See [Install Oracle SOA Quickstart](doc/soa_quickstart/InstallSOAQuickstart.md).
