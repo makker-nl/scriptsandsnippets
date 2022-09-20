@@ -1,20 +1,18 @@
 @echo off
 rem Part 1: Settings
-rem set JAVA_HOME=c:\Oracle\Java\jdk8
-set JAVA_HOME=c:\Program Files\Java\jdk1.8.0_261
-set SOFTWARE_HOME=Z:\Software
-set JDK8_INSTALL_HOME=%SOFTWARE_HOME%\Java\JDK8
-set JAVA_INSTALLER=%JDK8_INSTALL_HOME%\jdk-8u261-windows-x64.exe
-rem set FMW_HOME=C:\oracle\JDeveloper\12213_SOAQS
-set QS_INSTALL_HOME=%SOFTWARE_HOME%\Oracle\SOAQuickStart12.2.1.3
-set QS_EXTRACT_HOME=%TEMP%\Oracle\SOAQuickStart12.2.1.3
-set FMW_HOME=C:\oracle\JDeveloper\12213_SOAQS
+set JAVA_HOME=c:\Program Files\Java\jdk1.8.0_341
+set SOFTWARE_HOME=c:\Data\Stage
+set JDK8_INSTALL_HOME=%SOFTWARE_HOME%\Oracle\Java\JDK8
+set JAVA_INSTALLER=%JDK8_INSTALL_HOME%\jdk-8u341-windows-x64.exe
+set QS_INSTALL_HOME=%SOFTWARE_HOME%\Oracle\SOA_QS
+set QS_EXTRACT_HOME=%TEMP%\Oracle\SOA_QS
+set FMW_HOME=C:\oracle\JDeveloper\12214_SOAQS
 set QS_RSP=soaqs1221_silentInstall.rsp
 set QS_RSP_TPL=%QS_RSP%.tpl
-set QS_JAR=fmw_12.2.1.3.0_soa_quickstart.jar
-set QS_ZIP=%QS_INSTALL_HOME%\fmw_12.2.1.3.0_soaqs_Disk1_1of2.zip
-set QS_JAR2=fmw_12.2.1.3.0_soa_quickstart2.jar
-set QS_ZIP2=%QS_INSTALL_HOME%\fmw_12.2.1.3.0_soaqs_Disk1_2of2.zip
+set QS_JAR=fmw_12.2.1.4.0_soa_quickstart.jar
+set QS_ZIP=%QS_INSTALL_HOME%\V983385-01_1of2.zip
+set QS_JAR2=fmw_12.2.1.4.0_soa_quickstart2.jar
+set QS_ZIP2=%QS_INSTALL_HOME%\V983385-01_2of2.zip
 set QS_USER_DIR=c:\Data\JDeveloper\SOA
 set CMD_LOC=%~dp0
 set CURRENT_DIR=%CD%
@@ -37,8 +35,9 @@ if not exist "%JAVA_HOME%" (
     echo Java Installer %JAVA_INSTALLER% does not exist.
   )
 ) else (
-  echo JAVA_HOME %JAVA_HOME% exists
+  echo JAVA_HOME %JAVA_HOME% already exists
 )
+
 rem Part 3: Check the QuickStart Installer Files
 rem check SOA12.2 QS
 if exist "%JAVA_HOME%" (
@@ -65,9 +64,11 @@ if exist "%JAVA_HOME%" (
           echo QuickStart Jar part 1 %QS_JAR% now exists.
         ) else (
           echo QuickStart Jar part 1 %QS_JAR% still not exists.
+          goto :done
         )
       ) else (
         echo QuickStart ZIP part 1 %QS_ZIP% does not exist.
+        goto :done
       )
     ) else ( 
       echo QuickStart Jar part 1 %QS_JAR% exists.
@@ -83,9 +84,11 @@ if exist "%JAVA_HOME%" (
             echo QuickStart Jar part 2 %QS_JAR2% now exists.
           ) else (
             echo QuickStart Jar part 2 %QS_JAR2% still not exists.
+            goto :done
           )
         ) else (
           echo QuickStart ZIP part 2 %QS_ZIP2% does not exist.
+          goto :done
         )
       ) else ( 
         echo QuickStart Jar part 2 %QS_JAR2% exists.
@@ -122,4 +125,5 @@ if exist "%JAVA_HOME%" (
 ) else (
   echo %JAVA_HOME% doesn't exist so can't install SOA Quick Start.
 )
+:done
 echo Done
