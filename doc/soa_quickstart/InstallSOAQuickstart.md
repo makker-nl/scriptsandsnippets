@@ -40,7 +40,7 @@ The script expects the following files:
 | V983385-01_2of2.zip | %SOFTWARE_HOME%\Oracle\SOA_QS | Contains _fmw_12.2.1.4.0_soa_quickstart2.jar_ |
 | installSoaQS.bat | Script Location | The actual install script.|
 | soaqs1221_silentInstall.rsp.tpl | Script Location | Template file for the installer response file.|
-| jdev.conf | Script Location | Jdeveloper config file, that refers to non-default  environment variables refering the home folder. To prevent settings conflicts with a studio install of JDeveloper with the same version. |
+| jdev.boot | Script Location | Jdeveloper config file, that refers to non-default  environment variables refering the home folder. To prevent settings conflicts with a studio install of JDeveloper with the same version. |
 | ide.conf | Script Location | IDE config file, to set non-default settings for Heap and Garbage Collector.|
 
 
