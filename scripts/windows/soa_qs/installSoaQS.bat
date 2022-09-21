@@ -38,9 +38,17 @@ if not exist "%JAVA_HOME%" (
   echo JAVA_HOME %JAVA_HOME% already exists
 )
 
+rem Part 2B: The msvcr100.dll is expected in the JRE-bin, but apparently from around JDK 8 Update 261+ it isn't provided anymore
+if not exist "%JAVA_HOME%\jre\bin\msvcr100.dll" (
+  echo Copy msvcr100.dll from c:\Windows\System32\ to "%JAVA_HOME%\jre\bin"
+  copy c:\Windows\System32\msvcr100.dll "%JAVA_HOME%\jre\bin"
+) else (
+  echo Library "%JAVA_HOME%\jre\bin\msvcr100.dll" already exists.
+)
+
 rem Part 3: Check the QuickStart Installer Files
 rem check SOA12.2 QS
-if exist "%JAVA_HOME%" (
+if exist "%JAVA_HOME%" ( 
   if not exist "%FMW_HOME%" (
     echo Quickstart Installer %QS_JAR% not installed yet.
     echo Let's try to install it in %FMW_HOME%
