@@ -113,7 +113,7 @@ if exist "%JAVA_HOME%" (
     if exist "%FMW_HOME%" (
       echo FMW_HOME %FMW_HOME% exists
       rem Part 5: update the JDeveloper User Home location.
-      echo "et the JDeveloper user home settings
+      echo "Set the JDeveloper user home settings
       if not exist %QS_USER_DIR% mkdir %QS_USER_DIR%
       echo set  JDEV_USER_DIR_SOA and JDEV_USER_HOME_SOA as  %QS_USER_DIR%
       setx -m JDEV_USER_DIR_SOA %QS_USER_DIR%
