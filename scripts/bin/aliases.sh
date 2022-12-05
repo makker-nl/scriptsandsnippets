@@ -46,6 +46,3 @@ alias mvnci="mvn clean install"
 alias mvnsbr="mvn spring-boot:run"
 alias mvnsbrd="mvn spring-boot:run -Dspring-boot.run.profiles=dev"
 # dev
-alias cdcortex="cd $NSHOME/CORTEX"
-alias cdccifuse="cd $NSHOME/CCIFUSE"
-alias cdmaxros="cd $NSHOME/CCIFUSE/max/max-adapter-activity-ros"
