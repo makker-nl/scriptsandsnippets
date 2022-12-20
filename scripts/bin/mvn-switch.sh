@@ -16,11 +16,11 @@ MVN_VS_USER_SET=$MVN_VS_HOME/$MVN_USER_SET_XML
 MVN_VS_GLOB_SET=$MVN_VS_HOME/$MVN_GLOB_SET_XML
 MVN_VS_LCL_REPO=$MVN_USER_CNF/repository-vs
 # NS Settings
-ENV_NS="NS"
-MVN_NS_HOME=~/git/NS/CORTEX/cci/cci-config-dev/maven
-MVN_NS_USER_SET=$MVN_NS_HOME/$MVN_USER_SET_XML
-MVN_NS_GLOB_SET=$MVN_NS_HOME/$MVN_GLOB_SET_XML
-MVN_NS_LCL_REPO=$MVN_USER_CNF/repository-ns
+ENV_ORCL="ORCL" 
+MVN_ORCL_HOME=~/git/orcl/maven
+MVN_ORCL_USER_SET=$MVN_NS_HOME/$MVN_USER_SET_XML
+MVN_ORCL_GLOB_SET=$MVN_NS_HOME/$MVN_GLOB_SET_XML
+MVN_ORCL_LCL_REPO=$MVN_USER_CNF/repository-orcl
 #
 remove_links () {
   echo Remove link to user maven settings $MVN_USER_SET
@@ -49,10 +49,10 @@ if [ $ENV = $ENV_VS ]; then
   echo Switch to $ENV_VS
   remove_links
   create_links "$MVN_VS_USER_SET" "$MVN_VS_GLOB_SET" "$MVN_VS_LCL_REPO"
-elif [ $ENV = $ENV_NS ]; then
-  echo Switch to $ENV_NS
+elif [ $ENV = $ENV_ORCL ]; then
+  echo Switch to $ENV_ORCL
   remove_links
-  create_links "$MVN_NS_USER_SET" "$MVN_NS_GLOB_SET" "$MVN_NS_LCL_REPO"
+  create_links "$MVN_ORCL_USER_SET" "$MVN_ORCL_GLOB_SET" "$MVN_ORCL_LCL_REPO"
 else
   echo Unknown environment $ENV
 fi
