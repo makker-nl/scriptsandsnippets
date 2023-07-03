@@ -16,6 +16,8 @@ alias gr="git reset --hard HEAD"
 alias glsunc="git ls-files -v | grep '^[[:lower:]]'"
 alias gls="git ls-files -v"
 alias gl="git log"
+alias ggetdev='git fetch origin develop:develop'
+alias gmergedev='git merge develop --no-ff'
 # docker compose
 alias dc_up="docker-compose up" 
 alias dc_upb="docker-compose up --build"
