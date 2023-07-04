@@ -18,6 +18,8 @@ alias gls="git ls-files -v"
 alias gl="git log"
 alias ggetdev='git fetch origin develop:develop'
 alias gmergedev='git merge develop --no-ff'
+alias gmv="git mv"
+alias grm="git rm"
 # docker compose
 alias dc_up="docker-compose up" 
 alias dc_upb="docker-compose up --build"
