@@ -5,10 +5,9 @@ alias kll="kill.sh"
 # git aliases
 alias ga="git add ."
 alias gc="git commit -m $1"
-alias gcob="gchob.sh $1"
-alias gsw="git switch"
 alias gp="git push"
 alias gpl="git pull"
+alias gft="git fetch"
 alias gs="git status"
 alias gclndev="git clone --single-branch --branch develop $1"
 alias gcln="git clone $1"
@@ -16,6 +15,27 @@ alias gr="git reset --hard HEAD"
 alias glsunc="git ls-files -v | grep '^[[:lower:]]'"
 alias gls="git ls-files -v"
 alias gl="git log"
+##
+# Taken from: https://gist.github.com/ecasilla/9669241
+# Creates an alias called "git hist" that outputs a nicely formatted git log.
+# Usage is just like "git log"
+# Examples:
+#   git hist
+#   git hist -5
+#   git hist <branch_name>
+#   git hist <tag_name> -10
+##
+git config --global alias.hist "log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short"
+alias ghist="git hist"
+alias gb="git branch"
+alias gbd="git branch -d "
+alias gchob="gchob.sh $1"
+alias gsw="git switch" # alias for "git checkout"
+alias ggetdev="git fetch origin develop:develop" 
+alias gmergedev="git merge develop --no-ff"
+alias grm="git rm"
+alias gmv="git mv"
+# alias gsw="git checkout" # In older versions "git switch" may not exist
 # docker compose
 alias dc_up="docker-compose up" 
 alias dc_upb="docker-compose up --build"
