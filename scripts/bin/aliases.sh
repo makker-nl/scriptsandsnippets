@@ -31,11 +31,11 @@ alias gb="git branch"
 alias gbd="git branch -d "
 alias gchob="gchob.sh $1"
 alias gsw="git switch" # alias for "git checkout"
+# alias gsw="git checkout" # In older versions "git switch" may not exist
 alias ggetdev="git fetch origin develop:develop" 
 alias gmergedev="git merge develop --no-ff"
-alias grm="git rm"
 alias gmv="git mv"
-# alias gsw="git checkout" # In older versions "git switch" may not exist
+alias grm="git rm"
 # docker compose
 alias dc_up="docker-compose up" 
 alias dc_upb="docker-compose up --build"
