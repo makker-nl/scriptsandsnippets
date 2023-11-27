@@ -70,4 +70,5 @@ alias mvncp="mvn clean package"
 alias mvnci="mvn clean install"
 alias mvnsbr="mvn spring-boot:run"
 alias mvnsbrd="mvn spring-boot:run -Dspring-boot.run.profiles=dev"
-# dev
+# Kubernetes
+alias k=kubectl
