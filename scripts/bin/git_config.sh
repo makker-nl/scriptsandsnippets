@@ -1,6 +1,8 @@
 #!/bin/bash
 # Add to bash profile
 # Taken from https://anotheruiguy.gitbooks.io/gitforeveryone/content/auto/README.html
+# Actual prompt taken from: https://www.baeldung.com/linux/bash-prompt-git
+
 # Source git-prompt.sh if it exists.
 if [ -f ~/.git-prompt.sh ]; then
     . ~/.git-prompt.sh
