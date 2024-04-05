@@ -30,7 +30,10 @@ alias gl="git log"
 #   git hist <tag_name> -10
 ##
 git config --global alias.hist "log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short"
-alias gcredcache="git config credential.helper 'cache --timeout=3600'"
+# Set Git credential cache timeout to one hour
+#alias gcredcache="git config credential.helper 'cache --timeout=3600'"
+# Set Git credential cache timeout to four hour
+alias gcredcache="git config credential.helper 'cache --timeout=14400'"
 alias ghist="git hist"
 alias gb="git branch"
 alias gbd="git branch -d "
