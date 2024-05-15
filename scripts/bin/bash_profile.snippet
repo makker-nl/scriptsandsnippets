@@ -1,6 +1,10 @@
 # User specific environment and startup programs
+OL_VERSION=$(cat /etc/oracle-release)
+IP=$(curl -s ifconfig.io)
+echo "Welcome to $OL_VERSION on external IP: $IP"
 export GH_HOME=/home/oracle/git/makker
 export SCR_HOME=$GH_HOME/scriptsandsnippets/scripts
-export SH_HOME=$SCR_HOME/bin
-export PATH=$SH_HOME:$PATH
-. $SH_HOME/aliases.sh
+export SCR_HOME_BIN=$SCR_HOME/bin
+export PATH=$SCR_HOME_BIN:$PATH
+. $SCR_HOME_BIN/aliases.sh
+. $SCR_HOME_BIN/git_config.sh
