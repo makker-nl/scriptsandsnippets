@@ -1,9 +1,9 @@
 #!/bin/bash
 #############################################################################
-# Clone multiple Git repositories for gem. Rotterdam - OIC
+# Create a remote branch and clone it.
 #
 # @author Martien van den Akker, Oracle Consulting
-# @version 1.0, 2023-02-28 - Move working copy/clone locations to user props.
+# @version 1.0, 2024-11-05 - Initial creation
 #
 #############################################################################
 SCRIPTPATH=$(dirname $0)
