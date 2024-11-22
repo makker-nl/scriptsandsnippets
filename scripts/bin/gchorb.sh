@@ -18,7 +18,7 @@ main () {
 
   # git push <remote-name> <branch-name>
   echo "Push local branch $local_branch_name to remote $remote_name $remote_branch_name"
-  git push $remote_name $local_branch_name>:$remote_branch_name
+  git push $remote_name $local_branch_name:$remote_branch_name
 
 }
 main "$@"
