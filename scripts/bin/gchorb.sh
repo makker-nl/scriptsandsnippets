@@ -9,7 +9,7 @@
 SCRIPTPATH=$(dirname $0)
 #
 main () {
-  local branch_name=$1
+  local branch_name=$(echo $1 | tr " " "-" )
   local remote_name=${2:-origin}
   local local_branch_name=$branch_name
   local remote_branch_name=$branch_name
