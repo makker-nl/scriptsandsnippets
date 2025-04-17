@@ -26,15 +26,24 @@ export VSCODE_USER_WORKSPACE_STG="$VSCODE_USER/workspaceStorage"
 #
 function cleanup_vscode () {
   echo "Cleanup VS Code caches in $VSCODE_CONFIG"
-  rm -rf "$VSCODE_CACHE/*"
-  rm -rf "$VSCODE_CACHED_DATA/*"
-  rm -rf "$VSCODE_CODE_CACHE/*"
-  rm -rf "$VSCODE_LOCAL_STG/*"
-  rm -rf "$VSCODE_SESSION_STG/*"
-  rm -rf "$VSCODE_CACHED_PRFL_DATA/*" 
-  rm -rf "$VSCODE_USER_GLOB_STG/*" 
-  rm -rf "$VSCODE_USER_HISTORY/*" 
-  rm -rf "$VSCODE_USER_WORKSPACE_STG/*" 
+  rm -rf "$VSCODE_CACHE"/*
+  du -h "$VSCODE_CACHE"
+  rm -rf "$VSCODE_CACHED_DATA"/*
+  du -h "$VSCODE_CACHED_DATA"
+  rm -rf "$VSCODE_CODE_CACHE"/*
+  du -h "$VSCODE_CODE_CACHE"
+  rm -rf "$VSCODE_LOCAL_STG"/*
+  du -h "$VSCODE_LOCAL_STG"
+  rm -rf "$VSCODE_SESSION_STG"/*
+  du -h "$VSCODE_SESSION_STG"
+  rm -rf "$VSCODE_CACHED_PRFL_DATA"/*
+  du -h "$VSCODE_SESSION_STG"
+  rm -rf "$VSCODE_USER_GLOB_STG"/*
+  du -h "$VSCODE_USER_GLOB_STG"
+  rm -rf "$VSCODE_USER_HISTORY"/* 
+  du -h "$VSCODE_USER_HISTORY"
+  rm -rf "$VSCODE_USER_WORKSPACE_STG"/*
+  du -h "$VSCODE_USER_WORKSPACE_STG"
 }
 #
 function main () {
